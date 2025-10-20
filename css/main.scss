@@ -1,0 +1,134 @@
+---
+---
+@import "uno";
+@import "tables";
+@import "monokai";
+
+/* Modifications */
+
+pre.highlight,
+.highlight pre {
+  padding: 10px;
+}
+
+pre.highlight code,
+.highlight pre code {
+  white-space: pre-wrap;
+}
+
+.btn,
+.navigation__item a {
+  margin: 5px 0;
+  white-space: nowrap;
+}
+
+.pagination__page-number {
+  display: inline-block;
+  padding: 10px;
+}
+
+.categories a,
+.tags a {
+  border: 1px solid #e25440;
+  border-radius: 20px;
+  color: #e25440;
+  display: inline-block;
+  font-size: 12px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  text-shadow: none;
+  white-space: nowrap;
+}
+
+.post-meta__tags {
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+.footer__copyright {
+    margin: 0 20px 10px;
+}
+
+.tauk-image {
+  margin-bottom: 1.2em;
+  position: relative;
+  width: 50%;
+  height: 50%;
+  // border: 3px solid #fff;
+  // border-radius:100%;
+}
+
+/* Froth logo in header: center horizontally and keep responsive */
+.froth-image {
+  display: block;        /* makes margin auto work */
+  margin: 0 auto 1rem;   /* center horizontally and add space below */
+  max-width: 320px;      /* cap absolute size */
+  width: 50%;            /* match .panel-cover__divider width so they're aligned */
+  height: auto;        /* preserve aspect ratio */
+  text-align: center;  /* defensive: center inline content if any */
+}
+
+/* Mailchimp form overrides */
+/* Mailchimp form consolidated overrides - tuned to match screenshot */
+#mc_embed_signup {
+  max-width: 900px;
+  margin: 1.25rem auto;
+  font-family: inherit; /* ensure typography matches page */
+}
+
+.mc-form-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.mc-form-row input.email {
+  flex: 1 1 auto;
+  padding: 0.9rem 1rem;
+  border-radius: 6px; /* subtle rounded corners like screenshot */
+  border: 1px solid rgba(0,0,0,0.12);
+  background: #fff;
+  color: #333;
+  font-size: 1.05rem;
+  font-family: inherit;
+  box-shadow: none;
+}
+
+.mc-form-row input.email:focus {
+  outline: none;
+  border-color: rgba(0,0,0,0.22);
+}
+
+.mc-form-row .button {
+  margin: 0;
+  padding: 0.9rem 1.25rem;
+  border-radius: 6px;
+  background: #bfbfbf; /* neutral grey */
+  color: #fff;
+  border: none;
+  /* match panel-cover__description typography */
+  font-family: "Roboto Slab", serif;
+  font-weight: lighter;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.mc-form-row .button:hover,
+.mc-form-row .button:focus {
+  background: #a7a7a7;
+}
+
+/* placeholder color - slightly darker for legibility */
+#mce-EMAIL::placeholder { color: #757575; opacity: 1; }
+#mce-EMAIL::-webkit-input-placeholder { color: #757575; }
+#mce-EMAIL:-ms-input-placeholder { color: #757575; }
+#mce-EMAIL::-ms-input-placeholder { color: #757575; }
+
+@media (max-width: 719px) {
+  .mc-form-row { gap: 0.5rem; }
+}
+
+@media (max-width: 519px) {
+  .mc-form-row { flex-direction: column; align-items: stretch; }
+  .mc-form-row .button { align-self: center; width: 50%; }
+}
